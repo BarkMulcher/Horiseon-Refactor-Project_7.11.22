@@ -24,7 +24,8 @@ body {
     color: #d9dcd6;
 }
 
-.header div {
+/* changed all header elements' children from div to nav to reflect change to HTML syntax */
+.header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -32,12 +33,23 @@ body {
     font-size: 20px;
 }
 
-.header div ul {
-    list-style-type: none;
+.header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: circle;
 }
 
-.header div ul li {
+.header::after {
+    /*adding this changed the header background color (or maybe whole container) to enlarge behind nav links when window is resized and nav links wrap*/
+    /* found this as an example at https://www.w3schools.com/Css/tryit.asp?filename=tryresponsive_image3 */
+    display: table;
+    content: ""; 
+    clear: both;
+}
+
+.header nav ul li {
     display: inline-block;
+    
     margin-left: 25px;
 }
 
@@ -84,6 +96,14 @@ p {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
+}
+
+/* added aside element and aligned aside text to center because it looks good to me */
+
+aside {
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-flow: nowrap;
 }
 
 .benefit-lead {
@@ -134,7 +154,11 @@ p {
     max-width: 150px;
 }
 
+
+    /* changed 3 following elements' display to inline-block to fix the image overflowing the container when window is resized */
+    /* then changed to table display due to the p*/
 .search-engine-optimization {
+    display: table;
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
@@ -144,6 +168,7 @@ p {
 }
 
 .online-reputation-management {
+    display: table;
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
@@ -153,6 +178,7 @@ p {
 }
 
 .social-media-marketing {
+    display: table;
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
@@ -197,4 +223,15 @@ p {
 
 .footer h2 {
     font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    aside {
+        di
+    }
+
+
 }
