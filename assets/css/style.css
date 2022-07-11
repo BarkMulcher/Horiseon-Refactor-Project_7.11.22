@@ -103,7 +103,6 @@ p {
 
 aside {
     display: inline-table;
-    text-align: center;
     flex-wrap: nowrap;
 }
 
