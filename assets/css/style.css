@@ -88,6 +88,7 @@ p {
 }
 
 .benefits {
+    display: table;
     margin-right: 20px;
     padding: 20px;
     clear: both;
@@ -96,14 +97,15 @@ p {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
+
 }
 
 /* added aside element and aligned aside text to center because it looks good to me */
 
 aside {
+    display: inline-table;
     text-align: center;
     flex-wrap: nowrap;
-    flex-flow: nowrap;
 }
 
 .benefit-lead {
@@ -224,14 +226,22 @@ aside {
 .footer h2 {
     font-size: 20px;
 }
-
-@media screen and (min-width: 768px) {
-    header {
-        flex-direction: column;
+/**/
+@media screen and (max-width: 768px) {
+    .benefits {
+        display: table;
+        width: 75%;
+        float: left;
+        margin-left: 20px;
     }
-    aside {
-        di
-    }
+ 
+
+/* below: my attempt to change the responsive design of aside element, before deciding to change parent element's class, .benefits */
+   /* aside { 
+
+    display: table; 
+    flex-wrap: nowrap;
+    flex-direction: column; } */
 
 
-}
+   }
