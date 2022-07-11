@@ -15,4 +15,11 @@ I then proceeded to read, edit, and add to the linked CSS stylesheet. This proce
 
 A great resource has been to re-read our class documents, and my most used online resource has been w3schools' tutorials. I find this site easiest to navigate and find the answers I need.
 
-Per the project instructions, I tried to include a screenshot of the finished page, but I had trouble getting my computer to take a screenshot of my external display (using multiple displays).
+Site screenshot: ![image](https://user-images.githubusercontent.com/105980643/178359489-5a6b1cee-899c-42cb-a2f4-78579ad965aa.png)
+
+Site URL: https://barkmulcher.github.io/Horiseon-Refactor-Project_7.11.22/
+
+
+Thanks for Reading!
+
+- Lucas Haskell
