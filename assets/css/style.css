@@ -49,7 +49,6 @@ body {
 
 .header nav ul li {
     display: inline-block;
-    
     margin-left: 25px;
 }
 
@@ -108,6 +107,13 @@ aside {
     flex-wrap: nowrap;
 }
 
+/*consolidated sidebar container selectors */
+.benefits section {
+    margin-bottom: 37px;
+    color: #ffffff;
+}
+
+/*
 .benefit-lead {
     margin-bottom: 32px;
     color: #ffffff;
@@ -122,7 +128,14 @@ aside {
     margin-bottom: 32px;
     color: #ffffff;
 }
+*/
+/* consolidated all sidebar text selectors to below */
+.benefits h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
 
+/*
 .benefit-lead h3 {
     margin-bottom: 10px;
     text-align: center;
@@ -137,7 +150,15 @@ aside {
     margin-bottom: 10px;
     text-align: center;
 }
+*/
 
+/* consolidated all sidebar image selectors to below */
+.benefits img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+/*
 .benefit-lead img {
     display: block;
     margin: 10px auto;
@@ -155,10 +176,23 @@ aside {
     margin: 10px auto;
     max-width: 150px;
 }
+*/
 
+/* changed 3 following elements' display to inline-block to fix the image overflowing container during wdo resize */
+/* then changed to table display due to the p element exceeding container during resize*/
 
-    /* changed 3 following elements' display to inline-block to fix the image overflowing the container when window is resized */
-    /* then changed to table display due to the p*/
+/* changed all formerly-div boxes to section and consolidated to below */
+
+.content section {
+    display: table;
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+/*
 .search-engine-optimization {
     display: table;
     margin-bottom: 20px;
@@ -188,7 +222,15 @@ aside {
     background-color: #0072bb;
     color: #ffffff;
 }
+*/
 
+/* consolidated all the img class selectors for brevity */
+
+main img {
+    max-height: 200px;
+}
+
+/*
 .search-engine-optimization img {
     max-height: 200px;
 }
@@ -200,8 +242,16 @@ aside {
 .social-media-marketing img {
     max-height: 200px;
 }
+*/
 
-.search-engine-optimization h2 {
+/* consolidated all the headline class selectors */
+main h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+
+/*.search-engine-optimization h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
@@ -215,6 +265,7 @@ aside {
     margin-bottom: 20px;
     font-size: 36px;
 }
+*/
 
 .footer {
     padding: 30px;
@@ -226,7 +277,9 @@ aside {
 .footer h2 {
     font-size: 20px;
 }
-/**/
+
+/* added style rules to "fix" "benefits" aside - couldn't quite get it to wrap under correctly */
+
 @media screen and (max-width: 768px) {
     .benefits {
         display: table;
@@ -234,14 +287,21 @@ aside {
         float: left;
         margin-left: 20px;
     }
+/* changed sidebar images and font to enlarge during window resize  */
+    .benefits img {
+        max-width: 200px;
+    }
  
+    .benefits p {
+        font-size: 18px;
+    }
 
 /* below: my attempt to change the responsive design of aside element, before deciding to change parent element's class, .benefits */
-   /* aside { 
+   
+    /* aside { 
+        display: table; 
+        flex-wrap: nowrap;
+        flex-direction: column; } */
 
-    display: table; 
-    flex-wrap: nowrap;
-    flex-direction: column; } */
 
-
-   }
+}
